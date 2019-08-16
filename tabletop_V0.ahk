@@ -19,12 +19,12 @@ return
 Integral:
 {
   RunWait, UInfo.xlsx
-  sleep, 10
+  sleep, 10000 ;esperara 10 segundos para activar la tecla goto
   Send {f5}
-  sleep, 10
+  sleep, 1000
   Send A9
   Send {enter}
-  send test1prueba
+  send %IntegralBoisA%
   send {enter}
   msgbox completao tu
   return
