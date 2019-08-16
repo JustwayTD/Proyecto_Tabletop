@@ -13,11 +13,20 @@ Gui, Add, Edit, vIntegralBoisF1 w100
 Gui, Add, Text,, Cuantas interacciones tendra esta integral?
 Gui, Add, Edit, vIntegralBoisInt w100
 
-Gui, Add, Button, w80, Integrate
+Gui, Add, Button,w80 gIntegral, Integrate
 Gui, Show
 return
-;Integrate
-;{
-;  Integrate := StrReplace(vIntegralBoisF1, "X", %cell%)
+Integral:
+{
+  RunWait, UInfo.xlsx
+  sleep, 10
+  Send {f5}
+  sleep, 10
+  Send A9
+  Send {enter}
+  send test1prueba
+  send {enter}
+  msgbox completao tu
+  return
 
-;}
+}
