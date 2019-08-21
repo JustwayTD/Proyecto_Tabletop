@@ -24,7 +24,12 @@ Integral:
   sleep, 1000
   Send A9
   Send {enter}
-  msgbox %IntegralBoisA%
+  Clipboard = %Variable%
+  Clipboard:=Clipboard
+  Sleep 250
+  Send, ^v
+  Sleep 250
+  return
   send {enter}
   msgbox completao tu
   return
