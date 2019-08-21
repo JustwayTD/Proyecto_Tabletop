@@ -19,18 +19,17 @@ return
 Integral:
 {
   RunWait, UInfo.xlsx
-  sleep, 10000 ;esperara 10 segundos para activar la tecla goto
-  Send {f5}
-  sleep, 1000
-  Send A9
-  Send {enter}
-  Clipboard = %Variable%
-  Clipboard:=Clipboard
-  Sleep 250
-  Send, ^v
-  Sleep 250
+;  sleep, 5000 ;esperara 10 segundos para activar la tecla goto
+;  Send {f5}
+;  sleep, 1000
+  Clipboard = "funciona"
+  Clipboard:= Clipboard
+ Send, ^v
+   Sleep 250
   return
-  send {enter}
+;  Send {enter}
+
+;  send {enter}
   msgbox completao tu
   return
 
