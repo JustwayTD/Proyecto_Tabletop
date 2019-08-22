@@ -18,19 +18,36 @@ Gui, Show
 return
 Integral:
 {
-  RunWait, UInfo.xlsx
-;  sleep, 5000 ;esperara 10 segundos para activar la tecla goto
-;  Send {f5}
-;  sleep, 1000
-  Clipboard = "funciona"
+  IfEqual Mod( %IntegralBoisInt% , 2 ), 2
+  {
+      RunWait, UInfo.xlsx
+  }
+  RunWait, UInfo3.xlsx
+  sleep, 5000 ;esperara 5 segundos para activar la tecla goto
+  Send {f5}
+  sleep, 1000
+  Send {B3}
+  Send {enter}
+  Clipboard = %IntegralBoisA%
   Clipboard:= Clipboard
  Send, ^v
    Sleep 250
-  return
-;  Send {enter}
-
-;  send {enter}
-  msgbox completao tu
+   Send {f5}
+   sleep, 1000
+   Send {E3}
+   Send {enter}
+Clipboard:=""
+Clipboard = %IntegralBoisB%
+Send, ^v
+Sleep 250
+Send {enter}
+Send {f5}
+sleep, 1000
+Send {D3}
+Send {enter}
+Clipboard:= ""
+Clipboard = %IntegralBoisInt%
+  msgbox !!!!
   return
 
 }
