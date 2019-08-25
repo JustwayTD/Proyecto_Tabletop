@@ -19,8 +19,8 @@ return
 
 ; /// Main Button ///
 Integral:
-; /// Gui, Submit - so that all variables regarding GUI elements are saved - NoHide so the GUI can be used again
-Gui, Submit, NoHide
+; /// Gui, Submit - so that all variables regarding GUI elements are saved
+Gui, Submit
 {
   ;RunWait, UInfo.xlsx
 ;  sleep, 5000 ;esperara 10 segundos para activar la tecla goto
@@ -28,14 +28,13 @@ Gui, Submit, NoHide
 ;  sleep, 1000
   Clipboard = "funciona"
   Clipboard:= Clipboard
-  MsgBox, %Clipboard%
  Send, ^v
    Sleep 250
   return
 ;  Send {enter}
 
 ;  send {enter}
-  msgbox, completao tu
+  msgbox completao tu
   return
 
 }

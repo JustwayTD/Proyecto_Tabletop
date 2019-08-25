@@ -16,26 +16,21 @@ Gui, Add, Edit, vIntegralBoisInt w100
 Gui, Add, Button,w80 gIntegral, Integrate
 Gui, Show
 return
-
-; /// Main Button ///
 Integral:
-; /// Gui, Submit - so that all variables regarding GUI elements are saved - NoHide so the GUI can be used again
-Gui, Submit, NoHide
 {
-  ;RunWait, UInfo.xlsx
+  RunWait, UInfo.xlsx
 ;  sleep, 5000 ;esperara 10 segundos para activar la tecla goto
 ;  Send {f5}
 ;  sleep, 1000
   Clipboard = "funciona"
   Clipboard:= Clipboard
-  MsgBox, %Clipboard%
  Send, ^v
    Sleep 250
   return
 ;  Send {enter}
 
 ;  send {enter}
-  msgbox, completao tu
+  msgbox completao tu
   return
 
 }
