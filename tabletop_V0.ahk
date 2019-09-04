@@ -16,38 +16,26 @@ Gui, Add, Edit, vIntegralBoisInt w100
 Gui, Add, Button,w80 gIntegral, Integrate
 Gui, Show
 return
+
+; /// Main Button ///
 Integral:
+; /// Gui, Submit - so that all variables regarding GUI elements are saved - NoHide so the GUI can be used again
+Gui, Submit, NoHide
 {
-  IfEqual Mod( %IntegralBoisInt% , 2 ), 2
-  {
-      RunWait, UInfo.xlsx
-  }
-  RunWait, UInfo3.xlsx
-  sleep, 5000 ;esperara 5 segundos para activar la tecla goto
-  Send {f5}
-  sleep, 1000
-  Send {B3}
-  Send {enter}
-  Clipboard = %IntegralBoisA%
+  ;RunWait, UInfo.xlsx
+;  sleep, 5000 ;esperara 10 segundos para activar la tecla goto
+;  Send {f5}
+;  sleep, 1000
+  Clipboard = "funciona"
   Clipboard:= Clipboard
+  MsgBox, %Clipboard%
  Send, ^v
    Sleep 250
-   Send {f5}
-   sleep, 1000
-   Send {E3}
-   Send {enter}
-Clipboard:=""
-Clipboard = %IntegralBoisB%
-Send, ^v
-Sleep 250
-Send {enter}
-Send {f5}
-sleep, 1000
-Send {D3}
-Send {enter}
-Clipboard:= ""
-Clipboard = %IntegralBoisInt%
-  msgbox !!!!
+  return
+;  Send {enter}
+
+;  send {enter}
+  msgbox, completao tu
   return
 
 }
